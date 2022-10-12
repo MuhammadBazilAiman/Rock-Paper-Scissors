@@ -126,12 +126,18 @@ scissorsSelect2.addEventListener("click", () => {
   pickWord2.textContent = "Picked ✅";
 });
 
-// while (p1Rps.textContent !== "" && p2Rps.textContent !== "") {
-//   console.log("something");
-// }
+// when both player picked, fight box will glow
+var intervalId = window.setInterval(function () {
+  if (p1Rps.textContent !== "" && p2Rps.textContent !== "") {
+    fight.style.animation = "glowing 1s infinite";
+  }
+});
 
 // game start
 function checkWinner() {
+  
+  clearInterval(intervalId);
+
   let winner = {
     Rock: "Scissors",
     Scissors: "Paper",
