@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-image: url(https://preview.redd.it/dqxi1ias9a301.png?auto=webp&s=1368117f4476b490bc61cccec9ec509b02c02fb2);
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.title-box {
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: black;
+}
+
+.title-box h1 {
+  text-shadow: 2px 2px lightsteelblue;
+}
+
+.title-box p {
+  margin-top: 5px;
+  font-size: xx-small;
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+}
+
+.rules-main-box {
+  background-position: center;
+  background-color: rgb(112, 216, 216);
+  box-shadow: 5px 10px black;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.rules {
+  font-size: small;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bolder;
+}
+
+.rules-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  padding: 10px;
+}
+
+.game-box,
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 3%;
+}
+
+.game-box .vs {
+  font-size: 200px;
+  user-select: none;
+}
+
+.versus-box {
+  background-image: url(https://www.freepnglogos.com/uploads/vs-png/vintage-vs-with-black-lines-png-transparent-Images-12.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  width: 260px;
+  height: 260px;
+  border-radius: 70%;
+}
+
+.player1,
+.player2 {
+  font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: pink;
+  padding: 10px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.player1:hover,
+.player2:hover {
+  cursor: pointer;
+}
+
+.p1-box,
+.p2-box {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  border-radius: 10px;
+  background-image: url(https://w0.peakpx.com/wallpaper/499/101/HD-wallpaper-funny-silly-face-abstract-blue-cartoon-character-design-iphone-pixel.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 10px 5px;
+  text-shadow: 2px 2px lightcoral;
+}
+
+.p2-box {
+  background-image: url(https://w0.peakpx.com/wallpaper/262/403/HD-wallpaper-omg-cartoon-character-emoji-eyes-face-mouth-yellow.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p1_rps,
+.p2_rps {
+  display: none;
+}
+
+.button-box {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p1-button,
+.p2-button {
+  height: 100px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 60px;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(248, 125, 146);
+  animation: glowing 1.3s infinite;
+  cursor: pointer;
+  box-shadow: 5px 10px 5px;
+}
+
+.p1-button {
+  margin-left: 3%;
+}
+
+.p2-button {
+  margin-right: 3%;
+}
+
+.options,
+.options2 {
+  display: none;
+  gap: 10px;
+  font-size: 30px;
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.options *,
+.options2 * {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 10px 5px;
+  background-color: rgb(248, 125, 146);
+}
+
+.options *:hover,
+.options2 *:hover {
+  background-color: rgb(247, 91, 117);
+  cursor: pointer;
+}
+
+.fight-box {
+  color: white;
+  width: 15%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px white;
+  white-space: nowrap;
+}
+
+.fight-box:hover {
+  cursor: pointer;
+  color: aquamarine;
+  box-shadow: 5px 10px 10px aquamarine;
+}
+
+.winner {
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  font-size: 100px;
+  animation: shake 2s infinite;
+  text-shadow: 3px 3px gray;
+}
+
+@keyframes glowing {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .fight-box {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .fight-box {
+    font-size: large;
+  }
+}
